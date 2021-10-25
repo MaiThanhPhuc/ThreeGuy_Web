@@ -3,27 +3,27 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="styles/main_ex72.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
 
 <h1>Cookies</h1>
 
-<p>Here's a table with all of the cookies that this 
-browser is sending to the current server.</p>
+<p>Here's a table with all of the cookies that this
+    browser is sending to the current server.</p>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Value</th>
-  </tr>
-  <c:forEach var="c" items="${cookie}">      
-  <tr>
-    <td>${c.value.name}</td>
-    <td>${c.value.value}</td>
-  </tr>
-  </c:forEach>  
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    <c:forEach var="c" items="${cookie}">
+        <tr>
+            <td><c:out value='${c.value.name}'/></td>
+            <td><c:out value='${c.value.value}'/></td>
+        </tr>
+    </c:forEach>
 </table>
 
 <p><a href="download?action=viewAlbums">View list of albums</a></p>

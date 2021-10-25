@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +8,11 @@
 <body>
 
 <h1>List of albums</h1>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${cookie.firstNameCookie.value != null}">
+    <p>Welcome back, <c:out value='${cookie.firstNameCookie.value}'/></p>
+</c:if>
 
 <p>
     <a href="download?action=checkUser&amp;productCode=8601">
