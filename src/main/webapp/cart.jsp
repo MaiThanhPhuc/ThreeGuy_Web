@@ -32,7 +32,7 @@
     <td>${item.product.priceCurrencyFormat}</td>
     <td>${item.totalCurrencyFormat}</td>
     <td>
-      <a href="cart?productCode=${item.product.code}&amp;quantity=0">Remove Item</a>
+<%--      <a href="cart?productCode=${item.product.code}&amp;quantity=0">Remove Item</a>--%>
       <form action="" method="post">
         <input type="hidden" name="productCode"
                value="${item.product.code}">
@@ -45,9 +45,9 @@
 </c:forEach>
 </table>
 
-<p><b>To change the quantity</b>, enter the new quantity 
+<p><b>To change the quantity</b>, enter the new quantity
       and click on the Update button.</p>
-  
+
 <form action="" method="post">
   <input type="hidden" name="action" value="shop">
   <input type="submit" value="Continue Shopping">
